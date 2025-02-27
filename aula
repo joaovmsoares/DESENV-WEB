@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Simples</title>
+</head>
+<body>
+    <h1>Site Simples aula </h1>
+    <p>aula html.</p>
+    <a href="https://www.google.com" target="_blank">Visite o Google</a>
+    <p>Nao sei muita coisa ainda:</p>
+    <ul>
+        <li>Minha primeira aula com a senhora</li>
+        <li>estou aprendendo</li>
+    </ul>
+</body>
+</html>
