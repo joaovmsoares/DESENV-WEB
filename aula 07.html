@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Presença</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eeeeee;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .lista {
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 350px;
+    }
+
+    .item {
+      padding: 6px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nome {
+      font-weight: bold;
+    }
+
+    .presenca {
+      color: green;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Presença</h1>
+
+  <div class="lista" id="listaPresenca"></div>
+
+  <script>
+    var nomes = ["João", "Larissa", "Carlos", "Bianca", "Eduardo"];
+    var divLista = document.getElementById("listaPresenca");
+
+    for (var i = 0; i < nomes.length; i++) {
+      var paragrafo = document.createElement("p");
+      paragrafo.className = "item";
+
+      var spanNome = document.createElement("span");
+      spanNome.className = "nome";
+      spanNome.textContent = nomes[i];
+
+      var spanPresenca = document.createElement("span");
+      spanPresenca.className = "presenca";
+      spanPresenca.textContent = "- presente";
+
+      paragrafo.appendChild(spanNome);
+      paragrafo.appendChild(spanPresenca);
+      divLista.appendChild(paragrafo);
+    }
+  </script>
+</body>
+</html>
