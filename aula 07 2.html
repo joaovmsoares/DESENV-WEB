@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Situação dos Alunos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eeeeee;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .lista {
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 400px;
+    }
+
+    .item {
+      padding: 6px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nome {
+      font-weight: bold;
+    }
+
+    .status {
+      margin-left: 10px;
+    }
+
+    .aprovado {
+      color: green;
+    }
+
+    .reprovado {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Situação dos Alunos</h1>
+
+  <div class="lista" id="listaAlunos"></div>
+
+  <script>
+    var alunos = {
+      "Lucas": 7.5,
+      "Mariana": 5.8,
+      "Tiago": 8.0,
+      "Amanda": 4.2,
+      "Beatriz": 6.0
+    };
+
+    var divLista = document.getElementById("listaAlunos");
+
+    for (var nome in alunos) {
+      var nota = alunos[nome];
+      var situacao = "";
+
+      if (nota >= 6) {
+        situacao = "aprovado";
+      } else {
+        situacao = "reprovado";
+      }
+
+      var paragrafo = document.createElement("p");
+      paragrafo.className = "item";
+
+      var spanNome = document.createElement("span");
+      spanNome.className = "nome";
+      spanNome.textContent = nome;
+
+      var spanStatus = document.createElement("span");
+      spanStatus.className = "status " + situacao;
+      spanStatus.textContent = " - " + situacao;
+
+      paragrafo.appendChild(spanNome);
+      paragrafo.appendChild(spanStatus);
+      divLista.appendChild(paragrafo);
+    }
+  </script>
+</body>
+</html>
